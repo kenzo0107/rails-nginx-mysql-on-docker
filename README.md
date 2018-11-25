@@ -59,11 +59,13 @@ docker-compose run --rm --no-deps web bundle exec rubocop
 
 ## SSL 生成
 
-* `*.hoge.test` というドメインでオレオレ ssl 作成
+* `*.hoge.test` というドメインで 自己証明書 作成
 
 ```
 cd docker/development/nginx/ssl && ./setup.sh
 ```
+
+※ ドメインを変更する場合は `setup.sh` 内の `SSL_DOMAIN` を変更してください。
 
 ## /etc/hosts 設定
 
@@ -93,4 +95,4 @@ docker-compose run --rm web bundle exec rake db:migrate
 docker-compose up
 ```
 
-ブラウザから https://dev.hoge.test
+ブラウザから https://dev.hoge.test にアクセス

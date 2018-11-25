@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SSL_DOMAIN="*.hoge.test"
+readonly SSL_DOMAIN="*.hoge.test"
 
 openssl genrsa -out key 2048
 openssl rsa -in key -out dev.key
